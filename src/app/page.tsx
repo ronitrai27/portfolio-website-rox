@@ -1,5 +1,8 @@
+"use client";
 import { AnimatedGradientTextDemo } from "@/components/custom/Banner";
+
 import Section1 from "@/components/custom/Section1";
+import Section2 from "@/components/custom/Section2";
 import { AnimatedThemeTogglerDemo } from "@/components/custom/Theme";
 import { LightRays } from "@/components/ui/light-rays";
 import Image from "next/image";
@@ -79,7 +82,7 @@ const Home = () => {
                   />
                   <h1 className="font-inter text-2xl font-semibold tracking-tighter">
                     {" "}
-                    & <span className="font-arimo text-orange-400">
+                    & <span className="font-sora text-orange-400">
                       Gen-AI
                     </span>{" "}
                     Developer
@@ -112,7 +115,7 @@ const Home = () => {
             </div>
             {/* =======END======== */}
             <div className="flex flex-col space-y-4 tracking-tight w-[400px] ml-auto">
-              <h1 className="font-inter text-xl">
+              <h1 className="font-sora text-xl">
                 Hi, I&apos;m <span className="text-orange-400">Ronit Rai</span>{" "}
                 — a Full-Stack & Gen-AI developer who loves turning crazy ideas
                 into scalable, real-world products.
@@ -130,6 +133,8 @@ const Home = () => {
 
       {/* ============SECTION - 1=========== */}
       <Section1 />
+      {/* ===========SECTION - 2=========== */}
+     <Section2/>
     </div>
   );
 };
