@@ -1,65 +1,137 @@
+import { AnimatedGradientTextDemo } from "@/components/custom/Banner";
+import Section1 from "@/components/custom/Section1";
+import { AnimatedThemeTogglerDemo } from "@/components/custom/Theme";
+import { LightRays } from "@/components/ui/light-rays";
 import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="relative w-screen overflow-hidden">
+      {/* HERE SECTION */}
+      <div className="h-screen relative overflow-hidden w-screen">
+        <LightRays />
+
+        {/* Dashed Bottom Left Fade Grid */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: `
+            linear-gradient(to right, #2e2e2e 1px, transparent 1px),
+            linear-gradient(to bottom, #2e2e2e 1px, transparent 1px)
+          `,
+            backgroundSize: "20px 20px",
+            backgroundPosition: "0 0, 0 0",
+            maskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+          `,
+            WebkitMaskImage: `
+            repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)
+          `,
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
+        ></div>
+        <main className="z-20 lg:pt-28 h-screen max-w-[1460px] mx-auto  w-full flex flex-col items-center justify-center">
+          <div className="grid lg:grid-cols-3 px-10 justify-center items-center ">
+            {/* ======TEXT PART======== */}
+            <div className="flex-col space-y-6 items-center justify-center ">
+              <AnimatedGradientTextDemo />
+              <div className="flex flex-col items-center ">
+                <h1 className="font-inter text-2xl font-semibold tracking-tight">
+                  Highly Scalable{" "}
+                  <span className="font-arimo text-orange-400">Full-Stack</span>{" "}
+                </h1>
+                <div className="flex gap-1 mt-1">
+                  <Image
+                    src="/h2.png"
+                    width={70}
+                    height={70}
+                    alt="rox"
+                    className="object-cover"
+                  />
+                  <h1 className="font-inter text-2xl font-semibold tracking-tighter">
+                    {" "}
+                    & <span className="font-arimo text-orange-400">
+                      Gen-AI
+                    </span>{" "}
+                    Developer
+                  </h1>
+                </div>
+                <h1 className="font-inter text-2xl -mt-8 font-semibold tracking-tight">
+                  From{" "}
+                  {/* <span className=" bg-linear-to-br from-blue-500 to-orange-400 text-transparent bg-clip-text font-extrabold text-4xl">
+                  INDIA
+                </span> */}
+                  INDIA
+                </h1>
+              </div>
+            </div>
+            {/* =====IMAGE PART======== */}
+            <div className="relative z-20">
+              <Image
+                src="/h1.png"
+                width={700}
+                height={700}
+                alt="rox"
+                className="object-cover  scale-125 "
+                style={{
+                  maskImage:
+                    "linear-gradient(to bottom, black 30%, transparent 100%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 30%, transparent 100%)",
+                }}
+              />
+            </div>
+            {/* =======END======== */}
+            <div className="flex flex-col space-y-4 tracking-tight w-[400px] ml-auto">
+              <h1 className="font-inter text-xl">
+                Hi, I&apos;m <span className="text-orange-400">Ronit Rai</span>{" "}
+                — a Full-Stack & Gen-AI developer who loves turning crazy ideas
+                into scalable, real-world products.
+              </h1>
+              <button className="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500  hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-rose-300 relative bg-gray-200/80 border dark:bg-gray-800 h-10 w-56  text-left p-3 text-base font-bold rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-blue-500 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-orange-300 after:right-8 after:top-3 after:rounded-full after:blur-lg font-inter dark:text-white text-gray-500">
+                Download CV
+              </button>
+            </div>
+          </div>
+          <h1 className="text-[150px] -mt-20 font-orb font-extrabold tracking-wider z-20 ">
+            I&apos;m ROX.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        </main>
+      </div>
+
+      {/* ============SECTION - 1=========== */}
+      <Section1 />
     </div>
   );
-}
+};
+
+export default Home;

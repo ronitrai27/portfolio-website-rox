@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Inter, Arimo, Orbitron } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/lib/theme-provider";
+import Navbar from "@/components/custom/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "600", "700"],
+});
+
+const arimo = Arimo({
+  subsets: ["latin"],
+  variable: "--font-arimo",
+  weight: ["400", "600", "700"],
+});
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sora.variable} ${inter.variable} ${arimo.variable} ${orbitron.variable} antialiased`}
       >
-        {children}
+       <ThemeProvider>
+        <Navbar/>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
