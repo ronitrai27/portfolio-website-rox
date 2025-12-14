@@ -10,7 +10,7 @@ const duplicatedImages = [...images, ...images];
 
 const Marquee = () => {
   return (
-    <div className="overflow-hidden w-full dark:bg-black bg-white py-6 mt-10 relative">
+    <div className="overflow-hidden w-full dark:bg-black bg-white py-6 mt-10  relative">
       {/* Left Gradient */}
       <div
         className="

@@ -1,6 +1,8 @@
 import React from 'react'
 import Marquee from './Marquee'
 import Image from 'next/image'
+import { WobbleCardDemo } from './BentroGrid'
+
 
 const Section1 = () => {
   return (
@@ -12,10 +14,8 @@ const Section1 = () => {
 
       <Marquee/>
 
-      <div className='w-full h-full '>
-        <Image src='/h4.png' alt='ma1' width={300} height={300} />
-        <Image src='/h3.png' alt='ma1' width={300} height={300} className=''/>
-
+      <div className='w-full h-full  mt-40 lg:px-20'>
+        <WobbleCardDemo/>
       </div>
     </div>
   )
