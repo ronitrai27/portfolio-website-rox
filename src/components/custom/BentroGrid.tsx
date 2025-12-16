@@ -76,8 +76,10 @@ export function WobbleCardDemo() {
       
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
-          <div>
-            hello
+          <div className="flex flex-col">
+            <h2 className="text-white font-inter font-bold text-4xl text-center mb-4 whitespace-nowrap">Modern Tech</h2>
+            <p className="text-center text-gray-300 font-inter italic text-md">Tech Stack & Tools & Frameworks I used that are modern , Scalable & Performant</p>
+            
           </div>
           <div className="lg:w-[70%] lg:pl-12">
             <div className="space-y-6">
@@ -180,9 +182,9 @@ export function WobbleCardDemo() {
       </WobbleCard>
 
       {/* 2ND  */}
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-500 shadow-lg">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-500 shadow-lg ">
+        <h2 className="  text-left text-balance text-base md:text-xl lg:text-3xl font-extrabold font-sora tracking-[-0.015em] text-white">
+         Achievements that speaks for themselves
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
           If someone yells “stop!”, goes limp, or taps out, the fight is over.
