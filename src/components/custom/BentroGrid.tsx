@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -35,6 +36,7 @@ import {
   // SiAzuredevops,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function WobbleCardDemo() {
   const collaborationIconsRow1 = [
@@ -70,18 +72,20 @@ export function WobbleCardDemo() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 max-w-7xl mx-auto w-full">
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-slate-900 min-h-[500px] lg:min-h-[300px] shadow-lg"
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-black min-h-[500px] lg:min-h-[350px] shadow-lg"
         className=""
       >
-      
-
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
           <div className="flex flex-col">
-            <h2 className="text-white font-inter font-bold text-4xl text-center mb-4 whitespace-nowrap">Modern Tech</h2>
-            <p className="text-center text-gray-300 font-inter italic text-md">Tech Stack & Tools & Frameworks I used that are modern , Scalable & Performant</p>
-            
+            <h2 className="text-white font-inter font-bold text-4xl text-center mb-4 whitespace-nowrap">
+              Modern Tech Stack
+            </h2>
+            <p className="text-center text-gray-300 font-inter mt-5 italic text-md">
+              Scalable, high-performance technologies, tools, and frameworks I
+              use to build modern applications.
+            </p>
           </div>
-          <div className="lg:w-[70%] lg:pl-12">
+          <div className="lg:w-[70%] lg:pl-8">
             <div className="space-y-6">
               {/* First Row */}
               <div className="overflow-x-hidden overflow-y-visible">
@@ -180,34 +184,45 @@ export function WobbleCardDemo() {
           </div>
         </div>
       </WobbleCard>
-
       {/* 2ND  */}
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-orange-500 shadow-lg ">
-        <h2 className="  text-left text-balance text-base md:text-xl lg:text-3xl font-extrabold font-sora tracking-[-0.015em] text-white">
-         Achievements that speaks for themselves
+      <WobbleCard containerClassName="col-span-1 min-h-[350px] bg-orange-500 shadow-lg ">
+        <h2 className="  text-left text-balance text-base md:text-xl lg:text-3xl font-extrabold font-sora tracking-[-0.015em] text-white -mt-10">
+          Achievements that speaks for themselves
         </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+        <p className="mt-4 max-w-[26rem] text-left lg:pr-16 font-arimo  text-base/6 text-neutral-200">
+          Recognized as a best problem solver with multiple awards for
+          innovation and excellence in Leadership.
         </p>
+        <Image
+          src="/medal.png"
+          width={200}
+          height={200}
+          alt="linear demo image"
+          className="absolute  -right-[10%] -bottom-5 object-contain rounded-2xl"
+        />
       </WobbleCard>
       {/* 3RD */}
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-slate-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] shadow-lg">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
+        <div className="max-w-lg">
+          <h2 className="text-left  text-base md:text-xl lg:text-4xl font-bold font-inter tracking-[-0.015em] text-white">
+            Turning ideas into impactful products.
           </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+
+          <p className="mt-4 text-left font-arimo italic text-base/6 text-neutral-200">
+            I build scalable full-stack and AI-driven projects focused on
+            performance, usability, and real-world impact.
           </p>
+
+          <button className="mt-6 inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2 text-sm text-white hover:bg-white/10 transition">
+            Explore My Work →
+          </button>
         </div>
         <img
-          src="/ma3.png"
-          width={500}
-          height={500}
+          src="/ben1.png"
+          width={600}
+          height={600}
           alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-2 -bottom-4 object-cover rounded-2xl"
         />
       </WobbleCard>
     </div>
