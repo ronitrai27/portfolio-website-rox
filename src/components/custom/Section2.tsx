@@ -27,7 +27,6 @@ export default function Section2() {
   hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-300/40 
 "
           >
-          
             <span
               className="
     w-8 h-8 rounded-full bg-orange-400 
