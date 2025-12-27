@@ -143,6 +143,7 @@ const Home = () => {
       {/* ============SECTION - 1=========== */}
       <Section1 />
       {/* ===========SECTION - 2=========== */}
+      <h1>This will be section 2</h1>
       {/* <Section2/> */}
     </div>
   );
