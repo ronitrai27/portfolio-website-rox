@@ -144,6 +144,7 @@ const Home = () => {
       <Section1 />
       {/* ===========SECTION - 2=========== */}
       <h1>This will be section 2</h1>
+      <p>This will be section 3 i guess</p>
       {/* <Section2/> */}
     </div>
   );
