@@ -117,7 +117,7 @@ const Home = () => {
             <div className="flex flex-col space-y-4 tracking-tight w-[400px] ml-auto">
               <div className="font-sora text-2xl">
                 Hi, I&apos;m <span className="text-orange-400">Ronit Rai</span>{" "}
-                {/* <div className="rounded-full bg-orange-500 py-1 w-[130px]">
+                <div className="rounded-full bg-orange-500 py-1 w-[130px]">
                   <Image
                     src="/me3.png"
                     width={40}
@@ -125,7 +125,7 @@ const Home = () => {
                     alt="wave"
                     className="object-contain w-12 h-12 rounded-full inline bg-white border "
                   />
-                </div> */}
+                </div>
                 — a Full-Stack & Gen-AI developer who loves turning crazy ideas
                 into scalable, real-world products.
               </div>
@@ -143,8 +143,6 @@ const Home = () => {
       {/* ============SECTION - 1=========== */}
       <Section1 />
       {/* ===========SECTION - 2=========== */}
-      <h1>This will be section 2</h1>
-      <p>This will be section 3 i guess</p>
       {/* <Section2/> */}
     </div>
   );
