@@ -134,9 +134,9 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <h1 className="text-[150px] -mt-20 font-orb font-extrabold tracking-wider z-20 ">
+          {/* <h1 className="text-[150px] -mt-20 font-orb font-extrabold tracking-wider z-20 ">
             I&apos;m ROX.
-          </h1>
+          </h1> */}
         </main>
       </div>
 
