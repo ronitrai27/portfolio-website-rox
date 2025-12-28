@@ -117,7 +117,7 @@ const Home = () => {
             <div className="flex flex-col space-y-4 tracking-tight w-[400px] ml-auto">
               <div className="font-sora text-2xl">
                 Hi, I&apos;m <span className="text-orange-400">Ronit Rai</span>{" "}
-                {/* <div className="rounded-full bg-orange-500 py-1 w-[130px]">
+                <div className="rounded-full bg-orange-500 py-1 w-[130px]">
                   <Image
                     src="/me3.png"
                     width={40}
@@ -125,24 +125,25 @@ const Home = () => {
                     alt="wave"
                     className="object-contain w-12 h-12 rounded-full inline bg-white border "
                   />
-                </div> */}
+                </div>
                 — a Full-Stack & Gen-AI developer who loves turning crazy ideas
                 into scalable, real-world products.
               </div>
-              <button className="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500  hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-rose-300 relative bg-gray-200/80 border dark:bg-gray-800 h-10 w-56  text-left p-3 text-base font-bold rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-blue-500 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-orange-300 after:right-8 after:top-3 after:rounded-full after:blur-lg font-inter dark:text-white text-gray-500">
+              {/* <button className="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500  hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-rose-300 relative bg-gray-200/80 border dark:bg-gray-800 h-10 w-56  text-left p-3 text-base font-bold rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-blue-500 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-orange-300 after:right-8 after:top-3 after:rounded-full after:blur-lg font-inter dark:text-white text-gray-500">
                 Download CV
-              </button>
+              </button> */}
             </div>
           </div>
-          <h1 className="text-[150px] -mt-20 font-orb font-extrabold tracking-wider z-20 ">
+          {/* <h1 className="text-[150px] -mt-20 font-orb font-extrabold tracking-wider z-20 ">
             I&apos;m ROX.
-          </h1>
+          </h1> */}
         </main>
       </div>
 
       {/* ============SECTION - 1=========== */}
       <Section1 />
       {/* ===========SECTION - 2=========== */}
+      {/* <Section2/> */}
     </div>
   );
 };
